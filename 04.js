@@ -17,8 +17,30 @@ Exempel på värden och deras svar:
 -1, 2, 18 ger average=6,333 och sum=19
 
 */
+function get_average_sum(array) {
 
-function get_average_sum() {
-    
+  if (array.length < 2 || array.length > 10) {
+      return false;
+  }
+
+  for (let i = 0; i < array.length; i++) {
+      if (!Number.isInteger(array[i])) {
+          return false;
+      }
+  }
+
+  const sum = array.reduce((a, b) => a + b, 0);
+  const avg = (sum / array.length) || 0;
+
+  const result = {
+      sum: sum,
+      average: avg,
+  };
+  return result;
 }
+
+const array = [1,2,3];
+const result = get_average_sum(array);
+console.log(array);
+console.log(result);
 

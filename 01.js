@@ -1,3 +1,23 @@
+let array = [];
+
+
+for ( let i = 0; i <=100; i++) {
+  let answer = i;
+  if ( i % 3 === 0 && i % 5 === 0) {
+    answer = 'FizzBuzz';
+  }
+
+  if ( i % 3 === 0) {
+    answer = 'Fizz';
+  }
+
+  if ( i % 5 === 0) {
+    answer = 'Buzz';
+  }  
+  array.push(answer);
+}
+console.log(array);
+
 /*
 
 - Lös FizzBuzz-problemet* för talen 0-100.

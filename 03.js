@@ -10,8 +10,9 @@ Lägg märke till att ni måste hantera mellanslag. "Ni talar bra latin" är t e
 
 */
 
-function is_palindrome() {
-
+function is_palindrome(str) {
+        var str = str.replace(/[^a-zA-Z0-9]+/gi, '').toLowerCase();
+        return str == str.split('').reverse().join('');
 }
 
 let test_string = 'sirap i paris';
